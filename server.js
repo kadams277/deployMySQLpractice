@@ -17,15 +17,15 @@ app.set("view engine", "handlebars");
 
 var mysql = require("mysql");
 
-
+/*
 var connection = mysql.createConnection({
   host: "sulnwdk5uwjw1r2k.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   user: "r6ho0ajn1pca72bc",
   password: "zjgxdankuw1q4yhj",
   database: "lwzcrqmwhqnfvign"
 });
+*/
 
-/*
 if (process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
@@ -36,7 +36,6 @@ if (process.env.JAWSDB_URL){
     database: "wishes_db"
   });
 };
-*/
 
 
 connection.connect(function(err) {
@@ -83,4 +82,4 @@ app.post("/create", function(req, res) {
 
 });
 
-app.listen(process.evn.PORT || port);
+app.listen(process.env.PORT || port);
